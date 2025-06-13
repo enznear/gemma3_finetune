@@ -38,13 +38,25 @@ pip install transformers datasets peft bitsandbytes
 
 ## Usage
 
+### Vision classification example
+
 Run the training script specifying the model and dataset you want to use:
 
 ```bash
 python scripts/finetune_vision_qlora.py --model google/vit-base-patch16-224 --dataset beans --epochs 3 --batch 4 --output finetuned_model
 ```
 
-The script loads the dataset from the Hugging Face hub, applies a 4-bit quantization setup, and fine-tunes the model with LoRA adapters.
+The script loads the dataset from the Hugging Face hub, applies a 4-bit quantization setup and fine-tunes the model with LoRA adapters.
+
+### Gemma product description example
+
+The repository also includes a script that fine-tunes `google/gemma-3-4b-pt` to generate Amazon product descriptions with images. It mirrors the official Gemma QLoRA guide.
+
+```bash
+python scripts/finetune_gemma_product_description.py
+```
+
+The resulting model can produce short SEO friendly descriptions when given a product image, name and category.
 
 
 ## Inference
