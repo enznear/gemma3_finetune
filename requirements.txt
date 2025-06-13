@@ -4,3 +4,4 @@ peft
 bitsandbytes
 Pillow
 torch
+trl
