@@ -27,6 +27,13 @@ afterwards with:
 
 ```bash
 source venv/bin/activate
+
+
+Install the dependencies with pip:
+
+```bash
+pip install transformers datasets peft bitsandbytes
+
 ```
 
 ## Usage
@@ -38,6 +45,7 @@ python scripts/finetune_vision_qlora.py --model google/vit-base-patch16-224 --da
 ```
 
 The script loads the dataset from the Hugging Face hub, applies a 4-bit quantization setup, and fine-tunes the model with LoRA adapters.
+
 
 ## Inference
 
