@@ -8,11 +8,32 @@ This repository provides an example script for fine-tuning a vision model with Q
 - `datasets`
 - `peft`
 - `bitsandbytes`
+- `Pillow`
+- `torch`
+
+All dependencies are listed in `requirements.txt`.
+
+## Setup
+
+Create a Python virtual environment and install the requirements:
+
+```bash
+bash scripts/setup_venv.sh
+```
+
+The script creates a `venv` directory using Python's `venv` module and installs
+the packages from `requirements.txt`. You can activate the environment
+afterwards with:
+
+```bash
+source venv/bin/activate
+
 
 Install the dependencies with pip:
 
 ```bash
 pip install transformers datasets peft bitsandbytes
+
 ```
 
 ## Usage
@@ -35,4 +56,3 @@ python scripts/predict_vision_qlora.py --model finetuned_model --image path/to/i
 ```
 
 The script loads the fine-tuned model with 4-bit weights and prints the predicted label for the input image.
-
