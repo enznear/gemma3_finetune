@@ -24,3 +24,15 @@ python scripts/finetune_vision_qlora.py --model google/vit-base-patch16-224 --da
 ```
 
 The script loads the dataset from the Hugging Face hub, applies a 4-bit quantization setup, and fine-tunes the model with LoRA adapters.
+
+
+## Inference
+
+After training completes, you can run inference on an image using:
+
+```bash
+python scripts/predict_vision_qlora.py --model finetuned_model --image path/to/image.jpg
+```
+
+The script loads the fine-tuned model with 4-bit weights and prints the predicted label for the input image.
+
